@@ -4,15 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/style.css" />
-    <title>Some webpage</title>
+    <title>Alexander Lindhe</title>
   </head>
   <body>
-    <div class="bgimg">
-      <div class="middle">
-        <h1>COMING SOON</h1>
-        <hr />
-        <p>PROBABLY</p>
+    <header id="home">
+      <nav id="nav-wrap">
+        <ul id="nav" class="nav">
+          <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+          <li><a class="smoothscroll" href="#about">About</a></li>
+        </ul>
+        <!-- end #nav -->
+      </nav>
+      <!-- end #nav-wrap -->
+      <div class="bgimg parallax">
+        <div class="middle">
+          <h1>Welcome!</h1>
+          <hr />
+        </div>
       </div>
-    </div>
+    </header>
+    <section id="about">
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+    </section>
   </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
 </html>

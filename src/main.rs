@@ -6,12 +6,7 @@ use rocket_dyn_templates::{context, Template};
 
 #[get("/")]
 async fn index() -> Template {
-    Template::render(
-        "index",
-        context! {
-            foo: 123,
-        },
-    )
+    Template::render("index", context! {})
 }
 
 #[launch]
