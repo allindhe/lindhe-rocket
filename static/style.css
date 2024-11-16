@@ -2,11 +2,35 @@ body,
 html {
   height: 100%;
   margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font: 80px / 1.1em "opensans-bold", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.presentation {
+  margin: 20px 60px;
+  color: #a8a8a8;
+  font-size: 18px;
+  font: 18px / 1.9em "librebaskerville-regular", serif;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.presentation span,
+.presentation a {
+  color: white;
 }
 
 .bgimg {
   /* Background image */
-  background-image: url("/images/coming_soon.jpg");
+  background-image: url("/images/background1.jpg");
   /* Full-screen */
   height: 100%;
   /* Center the background image */
@@ -17,10 +41,14 @@ html {
   position: relative;
   /* Add a white text color to all elements inside the .bgimg container */
   color: white;
-  /* Add a font */
-  font-family: "Courier New", Courier, monospace;
-  /* Set the font-size to 25 pixels */
-  font-size: 25px;
+}
+
+footer {
+  background-color: black;
+  height: 100px;
+  color: #1f1d1d;
+  color: red;
+  text-align: center;
 }
 
 .parallax {
@@ -43,10 +71,62 @@ html {
   text-align: center;
 }
 
+/* Links */
+svg {
+  height: 30px;
+}
+header svg {
+  fill: white;
+}
+footer svg {
+  fill: #1f1d1d;
+}
+
+svg:hover {
+  fill: #f06000;
+  -webkit-transition: fill 0.2s ease-in-out;
+  -moz-transition: fill 0.2s ease-in-out;
+  -o-transition: fill 0.2s ease-in-out;
+  -ms-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #f06000;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+a:active {
+  text-decoration: none;
+}
+
+.social li {
+  display: inline-block;
+  padding: 0px;
+  margin: 20px;
+}
+
+.social {
+  margin: 0;
+  padding: 0px;
+}
+
 /* Style the <hr> element */
 hr {
   margin: auto;
-  width: 40%;
+  width: 60%;
+  border: solid #f06000;
+  border-width: 1px 0 0;
 }
 
 /* primary navigation
@@ -62,7 +142,7 @@ hr {
 
 /* nav-wrap */
 #nav-wrap {
-  font: 12px sans-serif;
+  font-size: 12px;
   font-weight: 800;
   width: 100%;
   text-transform: uppercase;
@@ -72,7 +152,7 @@ hr {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
 
   transition: top 0.5s ease-in-out;
 }
@@ -113,4 +193,9 @@ ul#nav li a:active {
 }
 ul#nav li a:hover {
   color: #f06000;
+}
+
+#about {
+  background-color: #1f1d1d;
+  height: 100%;
 }
