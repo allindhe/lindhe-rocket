@@ -20,10 +20,12 @@
         <div class="text-box">
           <h1>Welcome!</h1>
           <p class="presentation">
-            My name is Alexander Lindhe and I'm a <span>software engineer.</span>
-            Here I plan to add some of my projects, whenever I get the feeling. This
-            <a href="https://github.com/allindhe/lindhe-rocket/tree/main">website</a>
-            is one of them. Please check out my <span>socials</span> below if you want to know more!
+            My name is Alexander Lindhe and I'm a <span>software engineer.</span><br>
+            While my core expertise lies with <span>C</span> and <span>Python</span>, my latest fascination lies with <span>Rust</span>!<br>
+            <br>
+            The intent of this site is to host some of my projects and ideas over time.<br>
+            For now, it's a work in progress.
+            Just like <a href="https://github.com/allindhe/lindhe-rocket/tree/main">this website</a><br>
           </p>
           <hr />
           <ul class="social">
@@ -56,7 +58,8 @@
         <div id="about-content">
           <div class="left-half">
             <p class="text-box">
-              I'll fill this in eventually. For sure. I think. Maybe...
+              Swedish software engineer with years of experience in automotive embedded systems.<br><br>
+              Alexander Lindhe combines a broad skillset with a pragmatic, passion-driven approach and an optimistic mindset.
             </p>
           </div>
           <div class="right-half">

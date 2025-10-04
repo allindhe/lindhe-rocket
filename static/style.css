@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #d9d8d8;
+  --primary-color: #b1b1b1;
   /* --secondary-color: #f06000; */
   --secondary-color: #fefda7;
   --tertiary-color: #000000;
@@ -23,7 +23,6 @@ html {
 p {
   margin: 0;
   font-family: arcade-classic, "librebaskerville-regular", serif;
-  font-size: 25px / 1.9em;
   letter-spacing: 1px;
   color: var(--primary-color);
 
@@ -31,7 +30,6 @@ p {
 
 h1 {
   /* font: 80px / 1.1em "opensans-bold", sans-serif; */
-  font-size: 100px / 1.1em;
   font-family: arcade-classic, "opensans-bold", sans-serif;
 
 
@@ -42,21 +40,18 @@ h1 {
 
 .presentation {
   margin: 30px 60px;
-  
-  /* font-size: 18px; */
-  /* font: "arcade-classic", 18px / 1.9em "librebaskerville-regular", serif; */
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 768px) {
-  .presentation {
-    margin: 10px 10px;
-  }  
+  font-size: 20px;
 }
 
 .presentation span,
 .presentation a {
   color: white;
+}
+.presentation span{
+  font-style: italic;
+}
+.presentation a {
+  font-weight: bold;
 }
 
 .bgimg {
@@ -97,10 +92,10 @@ header .text-box {
   position: absolute;
   transform: translate(-50%, -50%);
   
-  border: 2px, solid, #fefda7;
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
   
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
 
   top: 50%;
   left: 50%;
@@ -109,10 +104,11 @@ header .text-box {
 
 .text-box {
   text-align: center;
-  border: 2px, solid, #fefda7;
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
   
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 /* Links */
@@ -278,19 +274,45 @@ ul#nav li a:hover {
   padding: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .left-half p {
-    padding: 10px;
-  }  
-}
-
 #profile-picture {
   clip-path: circle(30%);
   height: 100%;
+  margin: 0 auto;
 
 }
 
 #about-content {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+  .presentation {
+    margin: 10px 10px;
+  }
+
+  #about-content {
+    width: 90%;
+  }
+  .left-half p {
+    padding: 10px;
+  }
+
+  /* make the text-box wider and its text scale down on small screens */
+  .text-box {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  header .text-box {
+    /* header text box is centered with transform; limit width on small screens */
+    left: 50%;
+    top: 45%;
+    width: 90%;
+    max-width: 720px;
+    padding: 16px;
+    font-size: 18px;
+  }
 }
