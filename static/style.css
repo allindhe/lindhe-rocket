@@ -315,4 +315,14 @@ ul#nav li a:hover {
     padding: 16px;
     font-size: 18px;
   }
+
+  #about-wrap {
+  height:35%;
+  }
+
+  #profile-picture {
+  clip-path: circle(30%);
+  height: 60%;
+
+}
 }
