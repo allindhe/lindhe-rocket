@@ -47,15 +47,23 @@ jQuery(document).ready(function ($) {
   // Handle height for about wrap in about section
   const $aboutWrap = $("#about-wrap");
   initAboutWrapHeight = $aboutWrap.height();
-  console.log(initAboutWrapHeight);
-  adjustAboutWrapSize();
-  $(window).on("resize", adjustAboutWrapSize);
+  adjustAboutWrapHeight();
+
+  // Ensure profile picture is loaded before adjusting size
+  const $profilePic = $("#profile-picture");
+  if ($profilePic.length && !$profilePic[0].complete) {
+    $profilePic.on("load", adjustAboutPictureSize);
+  } else {
+    adjustAboutPictureSize();
+  }
+
+  $(window).on("resize", adjustAboutWrapHeight);
+  $(window).on("resize", adjustAboutPictureSize);
 });
 
-function adjustAboutWrapSize() {
+function adjustAboutWrapHeight() {
   const $aboutWrap = $("#about-wrap");
   const $textBox = $(".left-half .text-box");
-  const $profilePic = $("#profile-picture");
 
   // Section height
   if ($textBox.length && $aboutWrap.length) {
@@ -68,11 +76,15 @@ function adjustAboutWrapSize() {
       $aboutWrap.height(initAboutWrapHeight);
     }
   }
+}
+
+function adjustAboutPictureSize() {
+  const $aboutWrap = $("#about-wrap");
+  const $profilePic = $("#profile-picture");
 
   // Profile picture size
   if ($profilePic.length && $aboutWrap.length) {
     const aboutWrapWidth = $aboutWrap.width();
-    const aboutWrapHeight = $aboutWrap.height();
     const halfWidth = aboutWrapWidth / 2;
 
     // Get original aspect ratio
@@ -80,17 +92,17 @@ function adjustAboutWrapSize() {
     const picHeight = $profilePic.height();
     const aspectRatio = picWidth / picHeight;
 
-    if (halfWidth < picWidth) {
+    if (aboutWrapWidth <= 768) {
       // Set width to half of about-wrap, adjust height to keep aspect ratio
       $profilePic.css({
         width: halfWidth,
         height: halfWidth / aspectRatio
       });
     } else {
-      // Set height to about-wrap height, adjust width to keep aspect ratio
+      // Set height to 100%
       $profilePic.css({
-        height: aboutWrapHeight,
-        width: aboutWrapHeight * aspectRatio
+        height: "100%",
+        width: ""
       });
     }
   }
