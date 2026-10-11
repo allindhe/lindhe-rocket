@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#234a38" />
+    <link rel="stylesheet" href="/golf.css" />
+    <title>Nine Holes | Lindhe</title>
+    <script src="/golf.js" defer></script>
+  </head>
+  <body>
+    <main class="scorecard-shell" data-round-id="round-demo-001">
+      <header class="page-header">
+        <a class="back-link" href="/" aria-label="Back to home">&#8592; Lindhe</a>
+        <p class="eyebrow">The clubhouse · scorekeeping</p>
+        <h1>Nine holes.<br /><em>One good round.</em></h1>
+      </header>
+
+      <section class="access-panel" id="access-panel" aria-labelledby="access-title">
+        <p class="eyebrow">Shared round</p>
+        <h2 id="access-title">Enter your group code</h2>
+        <p class="access-copy">The scorecard is shared with everyone who has the group's access code.</p>
+        <form id="access-form">
+          <label class="access-field">
+            <span>Access code</span>
+            <input id="access-code" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="access-button" type="submit">Open scorecard</button>
+        </form>
+        <p class="access-message" id="access-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="round-panel" id="round-panel" aria-labelledby="round-title" hidden>
+        <div class="round-heading">
+          <div>
+            <p class="eyebrow">Round 01 <span aria-hidden="true">/</span> Front nine</p>
+            <h2 id="round-title">Today's card</h2>
+          </div>
+          <p class="connection-state"><span class="state-dot" aria-hidden="true"></span><span id="connection-label">Shared round</span></p>
+        </div>
+
+        <div class="round-details">
+          <label class="detail-field">
+            <span>Course</span>
+            <input type="text" value="The home course" autocomplete="off" data-entity-type="round" data-entity-id="round-demo-001" data-field="courseName" aria-label="Course name" />
+          </label>
+        </div>
+
+        <div class="table-scroll" role="region" aria-label="Nine-hole scorecard" tabindex="0">
+          <table class="scorecard-table">
+            <thead>
+              <tr>
+                <th class="hole-heading" scope="col">Hole</th>
+                <th class="par-heading" scope="col">Par</th>
+                <th scope="col" class="player-heading">
+                  <label class="player-name"><span class="sr-only">Player 1 name</span><input type="text" value="Player 1" maxlength="24" data-entity-type="player" data-entity-id="player-1" data-field="name" /></label>
+                </th>
+                <th scope="col" class="player-heading">
+                  <label class="player-name"><span class="sr-only">Player 2 name</span><input type="text" value="Player 2" maxlength="24" data-entity-type="player" data-entity-id="player-2" data-field="name" /></label>
+                </th>
+                <th scope="col" class="player-heading">
+                  <label class="player-name"><span class="sr-only">Player 3 name</span><input type="text" value="Player 3" maxlength="24" data-entity-type="player" data-entity-id="player-3" data-field="name" /></label>
+                </th>
+                <th scope="col" class="player-heading">
+                  <label class="player-name"><span class="sr-only">Player 4 name</span><input type="text" value="Player 4" maxlength="24" data-entity-type="player" data-entity-id="player-4" data-field="name" /></label>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hole-row" data-hole-id="hole-1"><th scope="row">01</th><td class="par-display"><label><span class="sr-only">Hole 1 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-1" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 1</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-1" data-player-id="player-1" data-hole-id="hole-1" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 1</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-1" data-player-id="player-2" data-hole-id="hole-1" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 1</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-1" data-player-id="player-3" data-hole-id="hole-1" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 1</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-1" data-player-id="player-4" data-hole-id="hole-1" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-2"><th scope="row">02</th><td class="par-display"><label><span class="sr-only">Hole 2 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-2" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 2</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-2" data-player-id="player-1" data-hole-id="hole-2" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 2</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-2" data-player-id="player-2" data-hole-id="hole-2" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 2</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-2" data-player-id="player-3" data-hole-id="hole-2" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 2</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-2" data-player-id="player-4" data-hole-id="hole-2" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-3"><th scope="row">03</th><td class="par-display"><label><span class="sr-only">Hole 3 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-3" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 3</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-3" data-player-id="player-1" data-hole-id="hole-3" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 3</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-3" data-player-id="player-2" data-hole-id="hole-3" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 3</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-3" data-player-id="player-3" data-hole-id="hole-3" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 3</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-3" data-player-id="player-4" data-hole-id="hole-3" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-4"><th scope="row">04</th><td class="par-display"><label><span class="sr-only">Hole 4 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-4" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 4</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-4" data-player-id="player-1" data-hole-id="hole-4" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 4</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-4" data-player-id="player-2" data-hole-id="hole-4" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 4</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-4" data-player-id="player-3" data-hole-id="hole-4" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 4</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-4" data-player-id="player-4" data-hole-id="hole-4" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-5"><th scope="row">05</th><td class="par-display"><label><span class="sr-only">Hole 5 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-5" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 5</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-5" data-player-id="player-1" data-hole-id="hole-5" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 5</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-5" data-player-id="player-2" data-hole-id="hole-5" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 5</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-5" data-player-id="player-3" data-hole-id="hole-5" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 5</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-5" data-player-id="player-4" data-hole-id="hole-5" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-6"><th scope="row">06</th><td class="par-display"><label><span class="sr-only">Hole 6 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-6" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 6</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-6" data-player-id="player-1" data-hole-id="hole-6" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 6</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-6" data-player-id="player-2" data-hole-id="hole-6" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 6</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-6" data-player-id="player-3" data-hole-id="hole-6" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 6</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-6" data-player-id="player-4" data-hole-id="hole-6" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-7"><th scope="row">07</th><td class="par-display"><label><span class="sr-only">Hole 7 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-7" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 7</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-7" data-player-id="player-1" data-hole-id="hole-7" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 7</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-7" data-player-id="player-2" data-hole-id="hole-7" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 7</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-7" data-player-id="player-3" data-hole-id="hole-7" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 7</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-7" data-player-id="player-4" data-hole-id="hole-7" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-8"><th scope="row">08</th><td class="par-display"><label><span class="sr-only">Hole 8 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-8" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 8</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-8" data-player-id="player-1" data-hole-id="hole-8" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 8</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-8" data-player-id="player-2" data-hole-id="hole-8" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 8</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-8" data-player-id="player-3" data-hole-id="hole-8" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 8</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-8" data-player-id="player-4" data-hole-id="hole-8" data-field="strokes" /></label></td>
+              </tr>
+              <tr class="hole-row" data-hole-id="hole-9"><th scope="row">09</th><td class="par-display"><label><span class="sr-only">Hole 9 par</span><input class="par-input" type="number" min="3" max="5" value="4" required data-entity-type="hole" data-entity-id="hole-9" data-field="par" /></label></td>
+                <td><label><span class="sr-only">Player 1 strokes, hole 9</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-1-hole-9" data-player-id="player-1" data-hole-id="hole-9" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 2 strokes, hole 9</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-2-hole-9" data-player-id="player-2" data-hole-id="hole-9" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 3 strokes, hole 9</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-3-hole-9" data-player-id="player-3" data-hole-id="hole-9" data-field="strokes" /></label></td>
+                <td><label><span class="sr-only">Player 4 strokes, hole 9</span><input class="stroke-input" type="number" min="1" max="99" inputmode="numeric" placeholder="–" data-entity-type="score" data-entity-id="score-player-4-hole-9" data-player-id="player-4" data-hole-id="hole-9" data-field="strokes" /></label></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="total-row">
+                <th scope="row" colspan="2">Total <span class="total-caption">(completed holes)</span></th>
+                <td data-total-for="player-1" aria-live="polite">–</td>
+                <td data-total-for="player-2" aria-live="polite">–</td>
+                <td data-total-for="player-3" aria-live="polite">–</td>
+                <td data-total-for="player-4" aria-live="polite">–</td>
+              </tr>
+              <tr class="to-par-row">
+                <th scope="row" colspan="2">To par</th>
+                <td data-to-par-for="player-1">–</td>
+                <td data-to-par-for="player-2">–</td>
+                <td data-to-par-for="player-3">–</td>
+                <td data-to-par-for="player-4">–</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="card-footer">
+          <p class="edit-note" id="round-status" aria-live="polite">Edits are only in this browser session.</p>
+          <button class="reset-button" type="button" id="clear-scores">Clear all scores</button>
+        </div>
+      </section>
+
+      <dialog class="clear-dialog" id="clear-dialog" aria-labelledby="clear-title">
+        <form id="clear-form">
+          <p class="eyebrow">Confirm action</p>
+          <h2 id="clear-title">Clear all scores?</h2>
+          <p class="access-copy">Enter the group access code to remove every saved stroke from this round.</p>
+          <label class="access-field">
+            <span>Group access code</span>
+            <input id="clear-code" type="password" autocomplete="current-password" required />
+          </label>
+          <p class="clear-message" id="clear-message" role="status" aria-live="polite"></p>
+          <div class="dialog-actions">
+            <button class="dialog-cancel" type="button" id="cancel-clear">Cancel</button>
+            <button class="dialog-confirm" type="submit">Clear scores</button>
+          </div>
+        </form>
+      </dialog>
+      <p class="page-footer">Keep it honest. Enjoy the walk.</p>
+    </main>
+  </body>
+</html>
