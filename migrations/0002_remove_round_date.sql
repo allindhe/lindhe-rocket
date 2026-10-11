@@ -1,0 +1,1 @@
+ALTER TABLE scorecard_rounds DROP COLUMN played_on;
